@@ -15,7 +15,45 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        createUser()
         // preCompileCreateUser()
-        queryUsers()
+        // queryUsers()
+        insertData()
+    }
+    
+    func catchErrorAndRollback() {
+        if let queue = SQLiteManager.shareManager().dbQueue {
+            queue.inTransaction {db, rollback in
+                do {
+                    for i in 0..<10 {
+                        if i == 4 {
+                            try db.executeUpdate("INSERT INTO UserXXX (name, age) VALUES (?,?);",  values: ["hangge", i])
+                        } else {
+                            try db.executeUpdate("INSERT INTO User (name, age) VALUES (?,?);", values: ["hangge", i])
+                        }
+                    }
+                    print("插入成功")
+                } catch {
+                    print("插入失败, 进行回滚")
+                    rollback.pointee = true
+                }
+            }
+        }
+    }
+    
+    func insertData() {
+        let db = SQLiteManager.shareManager().db
+        if let queue = SQLiteManager.shareManager().dbQueue {
+            queue.inTransaction {db, rollback in
+                do {
+                    for i in 0..<10 {
+                        try db.executeUpdate("insert into User (name, age) values (?, ?);", withArgumentsIn: ["Zhllm", i])
+                    }
+                    print("插入成功")
+                } catch {
+                    print("插入失败")
+                    rollback.pointee = true
+                }
+            }
+        }
     }
     
     func createTable() {

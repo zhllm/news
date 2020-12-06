@@ -15,6 +15,7 @@
 		2F2A5B2F257B25D80018E92A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F2A5B2D257B25D80018E92A /* LaunchScreen.storyboard */; };
 		2F2A5B37257B270C0018E92A /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A5B36257B270C0018E92A /* SQLiteManager.swift */; };
 		2F2A5B39257B2C350018E92A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A5B38257B2C350018E92A /* User.swift */; };
+		2F2A5B3B257BE2550018E92A /* SQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A5B3A257BE2550018E92A /* SQLModel.swift */; };
 		FC6F50698E1BD622F3D70A49 /* Pods_news.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323B49F03ACB18C1DE4F5B6F /* Pods_news.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		2F2A5B30257B25D80018E92A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F2A5B36257B270C0018E92A /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		2F2A5B38257B2C350018E92A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2F2A5B3A257BE2550018E92A /* SQLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLModel.swift; sourceTree = "<group>"; };
 		323B49F03ACB18C1DE4F5B6F /* Pods_news.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_news.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C3878D234256CE2C403CB8 /* Pods-news.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-news.release.xcconfig"; path = "Target Support Files/Pods-news/Pods-news.release.xcconfig"; sourceTree = "<group>"; };
 		6122CBCFFEAD64295B4F1C34 /* Pods-news.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-news.debug.xcconfig"; path = "Target Support Files/Pods-news/Pods-news.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				2F2A5B30257B25D80018E92A /* Info.plist */,
 				2F2A5B36257B270C0018E92A /* SQLiteManager.swift */,
 				2F2A5B38257B2C350018E92A /* User.swift */,
+				2F2A5B3A257BE2550018E92A /* SQLModel.swift */,
 			);
 			path = news;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				2F2A5B23257B25D80018E92A /* AppDelegate.swift in Sources */,
 				2F2A5B25257B25D80018E92A /* SceneDelegate.swift in Sources */,
 				2F2A5B39257B2C350018E92A /* User.swift in Sources */,
+				2F2A5B3B257BE2550018E92A /* SQLModel.swift in Sources */,
 				2F2A5B37257B270C0018E92A /* SQLiteManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
