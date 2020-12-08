@@ -8,11 +8,25 @@
 
 import UIKit
 import FMDB
+import SnapKit
 
 class ViewController: UIViewController {
 
+    private lazy var contentView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .red
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
+        
+        self.view.addSubview(contentView)
+        contentView.snp.makeConstraints { (make) in
+            make.top.bottom.equalToSuperview().inset(80)
+            make.leading.trailing.equalToSuperview().inset(40)
+        }
 //        createUser()
         // preCompileCreateUser()
         // queryUsers()

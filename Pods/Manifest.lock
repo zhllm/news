@@ -1,18 +1,48 @@
 PODS:
+  - Alamofire (4.9.1)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - Kingfisher (4.10.1)
+  - RxCocoa (5.1.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.0)
+  - SnapKit (4.2.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - FMDB
+  - Kingfisher
+  - RxCocoa (= 5.1.0)
+  - RxSwift (= 5.1.0)
+  - SnapKit
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - FMDB
+    - Kingfisher
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  RxCocoa: 13d2a4d7546a34b8ececae8c281e4ea1dbb94f2b
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: e2e836ea36940b2f209fbb1e1b6b1355da9b4d72
+PODFILE CHECKSUM: 86c6c4ab24c550c4b27e74570acc2192e136f9d3
 
 COCOAPODS: 1.9.1
