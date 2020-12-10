@@ -25,11 +25,11 @@
 		2F4C81E9257FD956006365FD /* ZLUIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C81E8257FD956006365FD /* ZLUIFont+Extension.swift */; };
 		2F4C81EB257FDBAA006365FD /* ZLUILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C81EA257FDBAA006365FD /* ZLUILabel+Extension.swift */; };
 		2F4C81ED257FDD5D006365FD /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C81EC257FDD5D006365FD /* UIImage+Extension.swift */; };
+		2F6D0FEF25825DD900FFE97E /* ZLWinterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6D0FEE25825DD900FFE97E /* ZLWinterFlowLayout.swift */; };
 		FC6F50698E1BD622F3D70A49 /* Pods_news.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323B49F03ACB18C1DE4F5B6F /* Pods_news.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F2A5B1F257B25D80018E92A /* news.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = news.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2A5B22257B25D80018E92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F2A5B24257B25D80018E92A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2F2A5B26257B25D80018E92A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		2F4C81E8257FD956006365FD /* ZLUIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZLUIFont+Extension.swift"; sourceTree = "<group>"; };
 		2F4C81EA257FDBAA006365FD /* ZLUILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZLUILabel+Extension.swift"; sourceTree = "<group>"; };
 		2F4C81EC257FDD5D006365FD /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		2F6D0FEE25825DD900FFE97E /* ZLWinterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLWinterFlowLayout.swift; sourceTree = "<group>"; };
+		2F8BE9012581165200033825 /* news.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = news.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		323B49F03ACB18C1DE4F5B6F /* Pods_news.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_news.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C3878D234256CE2C403CB8 /* Pods-news.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-news.release.xcconfig"; path = "Target Support Files/Pods-news/Pods-news.release.xcconfig"; sourceTree = "<group>"; };
 		6122CBCFFEAD64295B4F1C34 /* Pods-news.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-news.debug.xcconfig"; path = "Target Support Files/Pods-news/Pods-news.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,18 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				2F2A5B21257B25D80018E92A /* news */,
-				2F2A5B20257B25D80018E92A /* Products */,
 				97CF84401275D20BCC4BE43A /* Pods */,
 				5413B6706E419F33BF64EB81 /* Frameworks */,
+				2F8BE9012581165200033825 /* news.app */,
 			);
-			sourceTree = "<group>";
-		};
-		2F2A5B20257B25D80018E92A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2F2A5B1F257B25D80018E92A /* news.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		2F2A5B21257B25D80018E92A /* news */ = {
@@ -160,6 +154,7 @@
 		2F4C81E4257FD81A006365FD /* 自定义类 */ = {
 			isa = PBXGroup;
 			children = (
+				2F6D0FEE25825DD900FFE97E /* ZLWinterFlowLayout.swift */,
 			);
 			path = "自定义类";
 			sourceTree = "<group>";
@@ -210,7 +205,7 @@
 			);
 			name = news;
 			productName = news;
-			productReference = 2F2A5B1F257B25D80018E92A /* news.app */;
+			productReference = 2F8BE9012581165200033825 /* news.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +232,7 @@
 				Base,
 			);
 			mainGroup = 2F2A5B16257B25D80018E92A;
-			productRefGroup = 2F2A5B20257B25D80018E92A /* Products */;
+			productRefGroup = 2F2A5B16257B25D80018E92A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -315,6 +310,7 @@
 				2F2A5B25257B25D80018E92A /* SceneDelegate.swift in Sources */,
 				2F2A5B44257E6DAB0018E92A /* ZLIndexViewController.swift in Sources */,
 				2F2A5B46257E6DBA0018E92A /* ZLActivityViewController.swift in Sources */,
+				2F6D0FEF25825DD900FFE97E /* ZLWinterFlowLayout.swift in Sources */,
 				2F2A5B3E257E6BDC0018E92A /* ZLBottomNavController.swift in Sources */,
 				2F2A5B39257B2C350018E92A /* User.swift in Sources */,
 				2F4C81E9257FD956006365FD /* ZLUIFont+Extension.swift in Sources */,
@@ -396,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -450,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -469,6 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YP4NL2MAYR;
 				INFOPLIST_FILE = news/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,6 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YP4NL2MAYR;
 				INFOPLIST_FILE = news/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

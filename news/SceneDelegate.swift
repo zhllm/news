@@ -20,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         var times = 3
-        while times > 0 {
-            print(times)
-            times -= 1
-            sleep(1)
-        }
+//        while times > 0 {
+//            print(times)
+//            times -= 1
+//            sleep(1)
+//        }
         // Instantiate UIWindow with scene
         let window = UIWindow(windowScene: scene)
         // Assign window to SceneDelegate window property
