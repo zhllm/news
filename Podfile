@@ -9,7 +9,11 @@ target 'news' do
   pod 'RxCocoa', '5.1.0'
   pod 'Kingfisher'
   pod 'Alamofire'
-   pod 'SwiftyJSON'
+  pod 'SwiftyJSON'
+  pod "SDWebImage", :git => "https://github.com.cnpmjs.org/SDWebImage/SDWebImage.git"
+  pod "YYModel"
+  pod 'SVProgressHUD', :git => 'https://github.com.cnpmjs.org/SVProgressHUD/SVProgressHUD.git'
+  pod "pop"
   # Pods for news
 
 end

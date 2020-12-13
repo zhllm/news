@@ -4,45 +4,77 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - Kingfisher (4.10.1)
+  - pop (1.0.12)
   - RxCocoa (5.1.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.0)
+  - SDWebImage (5.10.0):
+    - SDWebImage/Core (= 5.10.0)
+  - SDWebImage/Core (5.10.0)
   - SnapKit (4.2.0)
+  - SVProgressHUD (2.2.6):
+    - SVProgressHUD/Core (= 2.2.6)
+  - SVProgressHUD/Core (2.2.6)
   - SwiftyJSON (5.0.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
   - FMDB
   - Kingfisher
+  - pop
   - RxCocoa (= 5.1.0)
   - RxSwift (= 5.1.0)
+  - SDWebImage (from `https://github.com.cnpmjs.org/SDWebImage/SDWebImage.git`)
   - SnapKit
+  - SVProgressHUD (from `https://github.com.cnpmjs.org/SVProgressHUD/SVProgressHUD.git`)
   - SwiftyJSON
+  - YYModel
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - FMDB
     - Kingfisher
+    - pop
     - RxCocoa
     - RxRelay
     - RxSwift
     - SnapKit
     - SwiftyJSON
+    - YYModel
+
+EXTERNAL SOURCES:
+  SDWebImage:
+    :git: https://github.com.cnpmjs.org/SDWebImage/SDWebImage.git
+  SVProgressHUD:
+    :git: https://github.com.cnpmjs.org/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SDWebImage:
+    :commit: 7a17674f7edef4ab422ff430cbe74cca4b5bf522
+    :git: https://github.com.cnpmjs.org/SDWebImage/SDWebImage.git
+  SVProgressHUD:
+    :commit: 1bb9afb90a79b022708b6cd7be7f1fb6bdc46a3a
+    :git: https://github.com.cnpmjs.org/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RxCocoa: 13d2a4d7546a34b8ececae8c281e4ea1dbb94f2b
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
+  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SVProgressHUD: de812b4f0e1d65358f0064416473174ae619843f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 86c6c4ab24c550c4b27e74570acc2192e136f9d3
+PODFILE CHECKSUM: d820f308339c5b8971ebc94ad14af325daf709f8
 
 COCOAPODS: 1.9.1

@@ -15,39 +15,63 @@ class ZLWinterFlowLayout: UICollectionViewFlowLayout {
     var yOffset: CGFloat = 0.0
     var maxEvenY: CGFloat = 0.0
     var maxOddY: CGFloat = 0.0
+    var preLineCount = 0
     
     override func prepare() {
         super.prepare()
-        
         // 总的个数
-        let count = self.collectionView?.numberOfItems(inSection: 0)
+        let itemCount = self.collectionView?.numberOfItems(inSection: 0)
+        // delegate 必须要实现 collectionView(_:layout:insetForSectionAt) 方法
         let sectionEdgeInsets = self.delegate!.collectionView!(self.collectionView!, layout: self, insetForSectionAt: 0)
-        // let sectionEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
         xOffset = sectionEdgeInsets.left
         yOffset = sectionEdgeInsets.top
-        maxOddY = yOffset
-        maxEvenY = yOffset
         
-        for i in 0..<count! {
-            let indexPath = IndexPath(item: i, section: 0)
-            let itemSize = self.delegate?.collectionView?(self.collectionView!, layout: self, sizeForItemAt: indexPath)
-            if i % 2 == 0 {
-                xOffset = sectionEdgeInsets.left
-                yOffset = maxEvenY
+        let indexPath = IndexPath(row: 0, section: 0)
+        let size = self.delegate?.collectionView?(self.collectionView!, layout: self, sizeForItemAt: indexPath)
+        let count = ceilf(
+            Float((self.collectionView!.bounds.width - sectionEdgeInsets.left - sectionEdgeInsets.right + self.minimumInteritemSpacing) / (size!.width + self.minimumInteritemSpacing))
+        )
+        print(
+            self.collectionView!.bounds.width,
+            sectionEdgeInsets.left,
+            sectionEdgeInsets.right,
+            self.minimumInteritemSpacing,
+            size!.width,
+            self.minimumInteritemSpacing
+        )
+        preLineCount = Int(count)
+        var yHeights: [CGFloat] = []
+        for i in 0..<itemCount! {
+            let indexPaths = IndexPath(item: i, section: 0) //IndexPath(row: i, section: 0)
+            let itemSizes = self.delegate?.collectionView?(self.collectionView!, layout: self, sizeForItemAt: indexPaths)
+            if (self.xOffset + sectionEdgeInsets.right + itemSizes!.width - 1) <=
+                self.collectionView!.bounds.width {
+                let attribute = self.layoutAttributesForItem(at: indexPaths)
+                if yHeights.count == self.preLineCount {
+                    self.yOffset = yHeights[i % self.preLineCount] + self.minimumLineSpacing
+                }
+                attribute!.frame = CGRect(x: self.xOffset, y: yOffset, width: itemSizes!.width, height: itemSizes!.height)
+                attributes.append(attribute!)
+                self.xOffset = self.xOffset + itemSizes!.width + self.minimumInteritemSpacing
+                
+                if yHeights.count < self.preLineCount {
+                    yHeights.append(self.yOffset + itemSizes!.height)
+                } else {
+                    yHeights[i % preLineCount] = self.yOffset + itemSizes!.height
+                }
             } else {
-                xOffset = sectionEdgeInsets.left + itemSize!.width + self.minimumInteritemSpacing
-                yOffset = maxOddY
-            }
-            let attribute = self.collectionView!.layoutAttributesForItem(at: indexPath)
-            attribute?.frame = CGRect(x: xOffset, y: yOffset, width: itemSize!.width, height: itemSize!.height)
-            attributes.append(attribute!)
-            if i % 2 == 0 {
-                maxEvenY = maxEvenY + sectionEdgeInsets.top + itemSize!.height + self.minimumLineSpacing
-            } else {
-                maxOddY = maxOddY + sectionEdgeInsets.top + itemSize!.height + self.minimumLineSpacing
+                self.xOffset = sectionEdgeInsets.left
+                self.yOffset = yHeights[i % preLineCount] + self.minimumLineSpacing
+                let attribute = layoutAttributesForItem(at: indexPaths)
+                attribute!.frame = CGRect(x: xOffset, y: yOffset, width: itemSizes!.width, height: itemSizes!.height)
+                attributes.append(attribute!)
+                self.xOffset = self.xOffset + itemSizes!.width + self.minimumInteritemSpacing
+                yHeights[i % preLineCount] = self.yOffset + itemSizes!.height
             }
         }
-        
+        for i in yHeights {
+            yOffset = max(i, yOffset)
+        }
     }
     
     
@@ -58,8 +82,7 @@ class ZLWinterFlowLayout: UICollectionViewFlowLayout {
     
     override var collectionViewContentSize: CGSize {
         get {
-            let height = max(self.maxOddY, self.maxEvenY)
-            return CGSize(width: self.collectionView!.bounds.size.width, height: height)
+            return CGSize(width: self.collectionView!.bounds.size.width, height: self.yOffset)
         }
     }
     
@@ -69,3 +92,4 @@ class ZLWinterFlowLayout: UICollectionViewFlowLayout {
     }
     
 }
+
